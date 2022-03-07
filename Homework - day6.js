@@ -48,13 +48,19 @@ changeFooterAddressText("This is the new address");
 
 //EX10: Write a function to add a CSS class to every Amazon link
 
-let amazonlinks = document.getElementsByTagName("a");
 
- let addClassToAmazonLinks = (something) => {
-    amazonlinks[0,1,2,3,4].classList.add(something);
+ let addClassToAmazonLinks = () => {
+
+    let amazonlinks = document.querySelectorAll("a");
+    for (let i = 0; i < amazonlinks.length; i++) {
+        amazonlinks[i].href = "www.google.com"
+        amazonlinks[i].classList.add("new-class")
+    }
 }
 
-addClassToAmazonLinks("something2");
+addClassToAmazonLinks();
+ 
+
 
 // END : EX10: Write a function to add a CSS class to every Amazon link
 
